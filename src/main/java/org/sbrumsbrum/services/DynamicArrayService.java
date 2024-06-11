@@ -47,13 +47,14 @@ public class DynamicArrayService {
 
 		}
 	}
-	
-	public <T extends Number> void esercizio4Array(InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3, EvenOddEnum evenOdd) {
+
+	public <T extends Number> void esercizio4Array(InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3,
+			EvenOddEnum evenOdd) {
 		List<InputDTO<T>> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
 		list.add(dto3);
-		
+
 		for (InputDTO<T> dto : list) {
 			int temp = dto.getValue().intValue();
 			if (evenOdd == EvenOddEnum.EVEN && temp % 2 == 0) {
@@ -63,30 +64,59 @@ public class DynamicArrayService {
 			}
 		}
 	}
-	//TODO: esercizio 5
-	
-	public <T extends Number> void esercizio6 (InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3) {
+
+	public <T extends Number> void esercizio5Array(InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3) {
 		List<InputDTO<T>> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
 		list.add(dto3);
-		double sum = 0;
+
+		List<InputDTO<T>> evenList = new ArrayList<>();
+		List<InputDTO<T>> oddList = new ArrayList<>();
+
 		for (InputDTO<T> dto : list) {
-			sum = sum+ dto.getValue().doubleValue();
+			if (dto.getValue().intValue() % 2 == 0) {
+				evenList.add(dto);
+			} else {
+				oddList.add(dto);
+			}
 		}
-		System.out.println("La somma è: "+ sum);
+		System.out.println("Array iniziale: ");
+		for (InputDTO<T> dto : list) {
+			System.out.println(dto.getValue());
+		}
+		System.out.println("Array pari: ");
+		for (InputDTO<T> dto : evenList) {
+			System.out.println(dto.getValue());
+		}
+		System.out.println("Array dispari: ");
+		for (InputDTO<T> dto : oddList) {
+			System.out.println(dto.getValue());
+		}
 	}
-	
-	public <T extends Number> void esercizio7 (InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3) {
+
+	public <T extends Number> void esercizio6(InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3) {
 		List<InputDTO<T>> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
 		list.add(dto3);
 		double sum = 0;
 		for (InputDTO<T> dto : list) {
-			sum = sum+ dto.getValue().doubleValue();
+			sum = sum + dto.getValue().doubleValue();
+		}
+		System.out.println("La somma è: " + sum);
+	}
+
+	public <T extends Number> void esercizio7(InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3) {
+		List<InputDTO<T>> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+		double sum = 0;
+		for (InputDTO<T> dto : list) {
+			sum = sum + dto.getValue().doubleValue();
 		}
 		double avg = sum / list.size();
-		System.out.println("La media è: "+ avg);
+		System.out.println("La media è: " + avg);
 	}
 }
