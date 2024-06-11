@@ -26,7 +26,7 @@ public class Main {
 		IntegerDTO dto6 = new IntegerDTO(5);
 
 		DynamicArrayService prova2 = new DynamicArrayService();
-		prova2.esercizio1Array(dto1, dto2, dto3);
+		prova2.esercizio1Array(dto4, dto5, dto6);
 
 		System.out.println();
 		System.out.println("Esercizio 2 Array");

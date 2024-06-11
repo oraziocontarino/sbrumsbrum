@@ -154,7 +154,7 @@ public class DynamicArrayService  {
 		}
 		System.out.println("Il valore massimo è: " + maxDto);
 	}
-	public <T extends Number> void esercizio10(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+	public void esercizio10(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -168,7 +168,7 @@ public class DynamicArrayService  {
 		}
 		System.out.println("Il valore minimo è: " + minDto);
 	}
-	public <T extends Number> void esercizio11 (IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3)  {
+	public void esercizio11 (IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3)  {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
