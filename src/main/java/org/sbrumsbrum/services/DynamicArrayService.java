@@ -5,7 +5,7 @@ import java.util.List;
 import org.sbrumsbrum.dto.InputDTO;
 import org.sbrumsbrum.enums.EvenOddEnum;
 
-public class DynamicArrayService {
+public class DynamicArrayService  {
 
 	public <T> void esercizio1Array(InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3) {
 		List<InputDTO<T>> list = new ArrayList<>();
@@ -118,5 +118,54 @@ public class DynamicArrayService {
 		}
 		double avg = sum / list.size();
 		System.out.println("La media è: " + avg);
+	}
+
+	public <T extends Number> void esercizio8(InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3) {
+		List<InputDTO<T>> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+
+		double sommaDeiNumeri = 0;
+		int totaleDeiPesi = 0;
+
+		for (InputDTO<?> dto : list) {
+			int valore = (int) dto.getValue();
+			int peso = (valore % 2 == 0) ? 10 : 5;
+			sommaDeiNumeri += valore * peso;
+			totaleDeiPesi += peso;
+		}
+		double mediaPesata = sommaDeiNumeri / totaleDeiPesi;
+
+		System.out.println("La media pesata è: " + mediaPesata);
+	}
+
+	public <T extends Number> void esercizio9(InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3) {
+		List<InputDTO<T>> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+
+		Integer maxDto = (Integer) list.get(0).getValue();
+		for (InputDTO<T> dto : list) {
+			if ((int)dto.getValue() > maxDto) {
+				maxDto = (Integer) dto.getValue();
+			}
+		}
+		System.out.println("Il valore massimo è: " + maxDto);
+	}
+	public <T extends Number> void esercizio10(InputDTO<T> dto1, InputDTO<T> dto2, InputDTO<T> dto3) {
+		List<InputDTO<T>> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+
+		Integer minDto = (Integer) list.get(0).getValue();
+		for (InputDTO<T> dto : list) {
+			if ((int)dto.getValue() < minDto) {
+				minDto = (Integer) dto.getValue();
+			}
+		}
+		System.out.println("Il valore minimo è: " + minDto);
 	}
 }

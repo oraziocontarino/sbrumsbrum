@@ -147,5 +147,69 @@ public class Main {
 
 		DynamicArrayService prova14 = new DynamicArrayService();
 		prova14.esercizio7(dto40, dto41, dto42);
+
+		System.out.println();
+		System.out.println("Esercizio 8 Array");
+
+		InputDTO<Integer> dto43 = new InputDTO<Integer>(7);
+		InputDTO<Integer> dto44 = new InputDTO<Integer>(3);
+		InputDTO<Integer> dto45 = new InputDTO<Integer>(2);
+		StaticArrayService<Object> prova15 = new StaticArrayService<Object>();
+		prova15.esercizio8(dto43, dto44, dto45);
+
+		System.out.println();
+		System.out.println("Esercizio 8 ArrayList");
+
+		InputDTO<Integer> dto46 = new InputDTO<Integer>(7);
+		InputDTO<Integer> dto47 = new InputDTO<Integer>(3);
+		InputDTO<Integer> dto48 = new InputDTO<Integer>(2);
+		StaticArrayService<Object> prova16 = new StaticArrayService<Object>();
+		prova16.esercizio8(dto46, dto47, dto48);
+
+		System.out.println();
+		System.out.println("Esercizio 9 Array");
+
+		InputDTO<Integer> dto49 = new InputDTO<Integer>(7);
+		InputDTO<Integer> dto50 = new InputDTO<Integer>(3);
+		InputDTO<Integer> dto51 = new InputDTO<Integer>(2);
+		StaticArrayService<Object> prova17 = new StaticArrayService<Object>();
+		prova17.esercizio9(dto49, dto50, dto51);
+
+		System.out.println();
+		System.out.println("Esercizio 9 ArrayList");
+
+		InputDTO<Integer> dto52 = new InputDTO<Integer>(7);
+		InputDTO<Integer> dto53 = new InputDTO<Integer>(3);
+		InputDTO<Integer> dto54 = new InputDTO<Integer>(2);
+		StaticArrayService<Object> prova18 = new StaticArrayService<Object>();
+		prova18.esercizio9(dto52, dto53, dto54);
+		
+		System.out.println();
+		System.out.println("Esercizio 10 Array");
+
+		InputDTO<Integer> dto55 = new InputDTO<Integer>(7);
+		InputDTO<Integer> dto56 = new InputDTO<Integer>(3);
+		InputDTO<Integer> dto57 = new InputDTO<Integer>(2);
+		StaticArrayService<Object> prova19 = new StaticArrayService<Object>();
+		prova19.esercizio10(dto55, dto56, dto57);
+
+		System.out.println();
+		System.out.println("Esercizio 10 ArrayList");
+
+		InputDTO<Integer> dto58 = new InputDTO<Integer>(7);
+		InputDTO<Integer> dto59 = new InputDTO<Integer>(3);
+		InputDTO<Integer> dto60 = new InputDTO<Integer>(2);
+		StaticArrayService<Object> prova20 = new StaticArrayService<Object>();
+		prova20.esercizio10(dto58, dto59, dto60);
+		
+		System.out.println();
+		System.out.println("Esercizio 11 Array");
+
+		InputDTO<Integer> dto61 = new InputDTO<Integer>(7);
+		InputDTO<Integer> dto62 = new InputDTO<Integer>(3);
+		InputDTO<Integer> dto63 = new InputDTO<Integer>(2);
+		StaticArrayService<Object> prova21 = new StaticArrayService<Object>();
+		prova21.esercizio11(dto61, dto62, dto63);
 	}
+
 }
