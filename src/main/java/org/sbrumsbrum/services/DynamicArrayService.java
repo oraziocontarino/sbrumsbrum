@@ -5,9 +5,9 @@ import java.util.List;
 import org.sbrumsbrum.dto.IntegerDTO;
 import org.sbrumsbrum.enums.EvenOddEnum;
 
-public class DynamicArrayService  {
+public class DynamicArrayService {
 
-	public void esercizio1Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+	public void Esercizio1Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -20,7 +20,7 @@ public class DynamicArrayService  {
 		}
 	}
 
-	public void esercizio2Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+	public void Esercizio2Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -34,7 +34,7 @@ public class DynamicArrayService  {
 
 	}
 
-	public void esercizio3Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+	public void Esercizio3Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -48,8 +48,7 @@ public class DynamicArrayService  {
 		}
 	}
 
-	public <T extends Number> void esercizio4Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3,
-			EvenOddEnum evenOdd) {
+	public void Esercizio4Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, EvenOddEnum evenOdd) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -65,7 +64,7 @@ public class DynamicArrayService  {
 		}
 	}
 
-	public <T extends Number> void esercizio5Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+	public void Esercizio5Array(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -95,7 +94,7 @@ public class DynamicArrayService  {
 		}
 	}
 
-	public void esercizio6(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+	public void Esercizio6ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -107,7 +106,7 @@ public class DynamicArrayService  {
 		System.out.println("La somma è: " + sum);
 	}
 
-	public void esercizio7(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+	public void Esercizio7ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -120,7 +119,7 @@ public class DynamicArrayService  {
 		System.out.println("La media è: " + avg);
 	}
 
-	public void esercizio8(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+	public void Esercizio8ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -140,7 +139,7 @@ public class DynamicArrayService  {
 		System.out.println("La media pesata è: " + mediaPesata);
 	}
 
-	public <T extends Number> void esercizio9(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+	public void Esercizio9ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -148,13 +147,36 @@ public class DynamicArrayService  {
 
 		Integer maxDto = (Integer) list.get(0).getValue();
 		for (IntegerDTO dto : list) {
-			if ((int)dto.getValue() > maxDto) {
+			if ((int) dto.getValue() > maxDto) {
 				maxDto = (Integer) dto.getValue();
 			}
 		}
 		System.out.println("Il valore massimo è: " + maxDto);
 	}
-	public void esercizio10(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+
+	public void Esercizio10ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+		List<IntegerDTO> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+
+		int firstMax = Integer.MAX_VALUE;
+		int secondMax = Integer.MAX_VALUE;
+
+		for (IntegerDTO dto : list) {
+			int value = (int) dto.getValue();
+			if (value < firstMax) {
+				secondMax = firstMax;
+				firstMax = value;
+			} else if (value < secondMax && value != firstMax) {
+				secondMax = value;
+			}
+		}
+
+		System.out.println("Secondo massimo è: " + secondMax);
+	}
+
+	public void Esercizio11ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
@@ -162,32 +184,133 @@ public class DynamicArrayService  {
 
 		Integer minDto = (Integer) list.get(0).getValue();
 		for (IntegerDTO dto : list) {
-			if ((int)dto.getValue() < minDto) {
+			if ((int) dto.getValue() < minDto) {
 				minDto = (Integer) dto.getValue();
 			}
 		}
 		System.out.println("Il valore minimo è: " + minDto);
 	}
-	public void esercizio11 (IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3)  {
+
+	public void Esercizio12ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
 		List<IntegerDTO> list = new ArrayList<>();
 		list.add(dto1);
 		list.add(dto2);
 		list.add(dto3);
-        
-        int firstMin = Integer.MAX_VALUE;
-        int secondMin = Integer.MAX_VALUE;
+
+		int firstMin = Integer.MAX_VALUE;
+		int secondMin = Integer.MAX_VALUE;
+
+		for (IntegerDTO dto : list) {
+			int value = (int) dto.getValue();
+			if (value < firstMin) {
+				secondMin = firstMin;
+				firstMin = value;
+			} else if (value < secondMin && value != firstMin) {
+				secondMin = value;
+			}
+		}
+
+		System.out.println("Secondo minimo è: " + secondMin);
+	}
+
+	public void Esercizio13ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, int numberToControl) {
+		List<IntegerDTO> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+
+		int count = 0;
+		for (IntegerDTO dto : list) {
+			if (dto.getValue() == numberToControl) {
+				count++;
+			}
+		}
+		System.out.println("Il numero da controllare da te inserito è: " + numberToControl + " risulta " + count
+				+ " volte all'interno dell'array.");
+
+	}
+
+	public void Esercizio14ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+		List<IntegerDTO> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+
+		List<IntegerDTO> listInverted = new ArrayList<>();
+		for (int i = list.size() - 1; i >= 0; i--) {
+			listInverted.add(list.get(i));
+		}
+		System.out.println("Lista originale: ");
+		for (IntegerDTO dto : list) {
+			System.out.print(dto.getValue() + " ");
+		}
+		System.out.println();
+		System.out.println("Lista invertita: ");
+		for (IntegerDTO dto : listInverted) {
+			System.out.print(dto.getValue() + " ");
+		}
+	}
+	
+    public void Esercizio15ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+        List<IntegerDTO> list = new ArrayList<>();
+        list.add(dto1);
+        list.add(dto2);
+        list.add(dto3);
+        List<IntegerDTO> evenList = new ArrayList<>();
+        List<IntegerDTO> oddList = new ArrayList<>();
 
         for (IntegerDTO dto : list) {
-            int value = (int) dto.getValue();
-            if (value < firstMin) {
-                secondMin = firstMin;
-                firstMin = value;
-            } else if (value < secondMin && value != firstMin) {
-                secondMin = value;
+            if (dto.getValue() % 2 == 0) {
+                evenList.add(dto);
+            } else {
+                oddList.add(dto);
+            }
+        }
+        System.out.print("Lista pari: ");
+        for (IntegerDTO dto : evenList) {
+            System.out.print(dto.getValue() + " ");
+        }
+        System.out.println();
+
+        System.out.print("Lista dispari: ");
+        for (IntegerDTO dto : oddList) {
+            System.out.print(dto.getValue() + " ");
+        }
+        System.out.println();
+
+        List<IntegerDTO> unisciArray = new ArrayList<>();
+        unisciArray.addAll(evenList);
+        unisciArray.addAll(oddList);
+
+        System.out.print("Lista unita: ");
+        for (IntegerDTO dto : unisciArray) {
+            System.out.print(dto.getValue() + " ");
+        }
+    }
+    public void Esercizio16ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5, IntegerDTO dto6) {
+        List<IntegerDTO> list1 = new ArrayList<>();
+        list1.add(dto1);
+        list1.add(dto2);
+        list1.add(dto3);
+
+        List<IntegerDTO> list2 = new ArrayList<>();
+        list2.add(dto4);
+        list2.add(dto5);
+        list2.add(dto6);
+
+        List<IntegerDTO> commonElements = new ArrayList<>();
+
+        for (IntegerDTO element1 : list1) {
+            for (IntegerDTO element2 : list2) {
+                if (element1.getValue() == element2.getValue()) {
+                    commonElements.add(element1);
+                }
             }
         }
 
-        System.out.println("Secondo minimo è: " + secondMin);
+        System.out.print("Numeri in comune: ");
+        for (IntegerDTO element : commonElements) {
+            System.out.print(element + " ");
+        }
     }
 }
-	
