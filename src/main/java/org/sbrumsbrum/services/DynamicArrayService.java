@@ -250,67 +250,162 @@ public class DynamicArrayService {
 			System.out.print(dto.getValue() + " ");
 		}
 	}
-	
-    public void Esercizio15ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
-        List<IntegerDTO> list = new ArrayList<>();
-        list.add(dto1);
-        list.add(dto2);
-        list.add(dto3);
-        List<IntegerDTO> evenList = new ArrayList<>();
-        List<IntegerDTO> oddList = new ArrayList<>();
 
-        for (IntegerDTO dto : list) {
-            if (dto.getValue() % 2 == 0) {
-                evenList.add(dto);
-            } else {
-                oddList.add(dto);
-            }
-        }
-        System.out.print("Lista pari: ");
-        for (IntegerDTO dto : evenList) {
-            System.out.print(dto.getValue() + " ");
-        }
-        System.out.println();
+	public void Esercizio15ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3) {
+		List<IntegerDTO> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+		List<IntegerDTO> evenList = new ArrayList<>();
+		List<IntegerDTO> oddList = new ArrayList<>();
 
-        System.out.print("Lista dispari: ");
-        for (IntegerDTO dto : oddList) {
-            System.out.print(dto.getValue() + " ");
-        }
-        System.out.println();
+		for (IntegerDTO dto : list) {
+			if (dto.getValue() % 2 == 0) {
+				evenList.add(dto);
+			} else {
+				oddList.add(dto);
+			}
+		}
+		System.out.print("Lista pari: ");
+		for (IntegerDTO dto : evenList) {
+			System.out.print(dto.getValue() + " ");
+		}
+		System.out.println();
 
-        List<IntegerDTO> unisciArray = new ArrayList<>();
-        unisciArray.addAll(evenList);
-        unisciArray.addAll(oddList);
+		System.out.print("Lista dispari: ");
+		for (IntegerDTO dto : oddList) {
+			System.out.print(dto.getValue() + " ");
+		}
+		System.out.println();
 
-        System.out.print("Lista unita: ");
-        for (IntegerDTO dto : unisciArray) {
-            System.out.print(dto.getValue() + " ");
-        }
-    }
-    public void Esercizio16ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5, IntegerDTO dto6) {
-        List<IntegerDTO> list1 = new ArrayList<>();
-        list1.add(dto1);
-        list1.add(dto2);
-        list1.add(dto3);
+		List<IntegerDTO> unisciArray = new ArrayList<>();
+		unisciArray.addAll(evenList);
+		unisciArray.addAll(oddList);
 
-        List<IntegerDTO> list2 = new ArrayList<>();
-        list2.add(dto4);
-        list2.add(dto5);
-        list2.add(dto6);
+		System.out.print("Lista unita: ");
+		for (IntegerDTO dto : unisciArray) {
+			System.out.print(dto.getValue() + " ");
+		}
+	}
 
-        List<IntegerDTO> commonElements = new ArrayList<>();
+	public void Esercizio16ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4,
+			IntegerDTO dto5, IntegerDTO dto6) {
+		List<IntegerDTO> list1 = new ArrayList<>();
+		list1.add(dto1);
+		list1.add(dto2);
+		list1.add(dto3);
 
-        for (IntegerDTO element1 : list1) {
-            for (IntegerDTO element2 : list2) {
-                if (element1.getValue() == element2.getValue()) {
-                    commonElements.add(element1);
-                }
-            }
-        }
+		List<IntegerDTO> list2 = new ArrayList<>();
+		list2.add(dto4);
+		list2.add(dto5);
+		list2.add(dto6);
 
-        System.out.print("Numeri in comune: ");
-        for (IntegerDTO element : commonElements) {
-            System.out.print(element + " ");
-        }
-    }
+		List<IntegerDTO> commonElements = new ArrayList<>();
+
+		for (IntegerDTO element1 : list1) {
+			for (IntegerDTO element2 : list2) {
+				if (element1.getValue() == element2.getValue()) {
+					commonElements.add(element1);
+				}
+			}
+		}
+
+		System.out.print("Numeri in comune: ");
+		for (IntegerDTO element : commonElements) {
+			System.out.print(element + " ");
+		}
+	}
+
+	public void Esercizio17ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4,
+			IntegerDTO dto5, IntegerDTO dto6) {
+		List<IntegerDTO> list1 = new ArrayList<>();
+		list1.add(dto1);
+		list1.add(dto2);
+		list1.add(dto3);
+
+		List<IntegerDTO> list2 = new ArrayList<>();
+		list2.add(dto4);
+		list2.add(dto5);
+		list2.add(dto6);
+
+		List<IntegerDTO> notCommonElements = new ArrayList<>();
+
+		for (int i = 0; i < list1.size(); i++) {
+			int count = 0;
+			for (int j = 0; j < list2.size(); j++) {
+				if (list1.get(i).getValue() == list2.get(j).getValue()) {
+					count++;
+				}
+			}
+			if (count == 0) {
+				notCommonElements.add(list1.get(i));
+			}
+		}
+
+		for (int i = 0; i < list2.size(); i++) {
+			int count = 0;
+			for (int j = 0; j < list1.size(); j++) {
+				if (list2.get(i).getValue() == list1.get(j).getValue()) {
+					count++;
+				}
+			}
+			if (count == 0) {
+				notCommonElements.add(list2.get(i));
+			}
+		}
+
+		System.out.print("Elementi non comuni: ");
+		for (IntegerDTO element : notCommonElements) {
+			System.out.print(element.getValue() + " ");
+		}
+	}
+
+	public void Esercizio18ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4,
+			IntegerDTO dto5, IntegerDTO dto6) {
+		List<IntegerDTO> list1 = new ArrayList<>();
+		list1.add(dto1);
+		list1.add(dto2);
+		list1.add(dto3);
+
+		List<IntegerDTO> list2 = new ArrayList<>();
+		list2.add(dto4);
+		list2.add(dto5);
+		list2.add(dto6);
+
+		List<Integer> sumList = new ArrayList<>();
+
+		for (int i = 0; i < 3; i++) {
+			sumList.add(list1.get(i).getValue() + list2.get(i).getValue());
+		}
+
+		System.out.print("Somma della lista: ");
+		for (int value : sumList) {
+			System.out.print(value + " ");
+		}
+	}
+
+	public void Esercizio19ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4,
+			IntegerDTO dto5) {
+		List<IntegerDTO> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+		list.add(dto4);
+		list.add(dto5);
+
+		// Bubble sort using the swap mechanism
+		for (int i = 0; i < list.size() - 1; i++) {
+			for (int j = 0; j < list.size() - 1 - i; j++) {
+				if (list.get(j).getValue() > list.get(j + 1).getValue()) {
+					IntegerDTO temp = list.get(j);
+					list.set(j, list.get(j + 1));
+					list.set(j + 1, temp);
+				}
+			}
+		}
+		System.out.print("Array con bubble sort: ");
+		for (IntegerDTO dto : list) {
+			System.out.print(dto.getValue() + " ");
+		}
+	}
 }

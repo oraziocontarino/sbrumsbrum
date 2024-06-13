@@ -331,5 +331,80 @@ public class Main {
 		DynamicArrayService prova32 = new DynamicArrayService();
 		prova32.Esercizio16ArrayList(dto97, dto98, dto99, dto100, dto101, dto102);
 		
+		System.out.println();
+		System.out.println("Esercizio 17 Array");
+
+		IntegerDTO dto103 = new IntegerDTO(10);
+		IntegerDTO dto104 = new IntegerDTO(5);
+		IntegerDTO dto105 = new IntegerDTO(2);
+		IntegerDTO dto106 = new IntegerDTO(10);
+		IntegerDTO dto107 = new IntegerDTO(5);
+		IntegerDTO dto108 = new IntegerDTO(3);
+		
+		StaticArrayService prova33 = new StaticArrayService();
+		prova33.Esercizio17(dto103, dto104, dto105, dto106, dto107, dto108);
+		
+		System.out.println();
+		System.out.println("Esercizio 17 ArrayList");
+
+		IntegerDTO dto109 = new IntegerDTO(10);
+		IntegerDTO dto110 = new IntegerDTO(5);
+		IntegerDTO dto111 = new IntegerDTO(2);
+		IntegerDTO dto112 = new IntegerDTO(10);
+		IntegerDTO dto113 = new IntegerDTO(5);
+		IntegerDTO dto114 = new IntegerDTO(3);
+		
+		DynamicArrayService prova34 = new DynamicArrayService();
+		prova34.Esercizio17ArrayList(dto109, dto110, dto111, dto112, dto113, dto114);
+		
+		System.out.println();
+		System.out.println("Esercizio 18 Array");
+
+		IntegerDTO dto115 = new IntegerDTO(5);
+		IntegerDTO dto116 = new IntegerDTO(2);
+		IntegerDTO dto117 = new IntegerDTO(10);
+		IntegerDTO dto118 = new IntegerDTO(5);
+		IntegerDTO dto119 = new IntegerDTO(3);
+		IntegerDTO dto120 = new IntegerDTO(10);
+		
+		StaticArrayService prova35 = new StaticArrayService();
+		prova35.Esercizio18(dto115, dto116, dto117, dto118, dto119, dto120);
+		
+		System.out.println();
+		System.out.println("Esercizio 18 ArrayList");
+
+		IntegerDTO dto121 = new IntegerDTO(10);
+		IntegerDTO dto122 = new IntegerDTO(5);
+		IntegerDTO dto123 = new IntegerDTO(2);
+		IntegerDTO dto124 = new IntegerDTO(10);
+		IntegerDTO dto125 = new IntegerDTO(5);
+		IntegerDTO dto126 = new IntegerDTO(3);
+		
+		DynamicArrayService prova36 = new DynamicArrayService();
+		prova36.Esercizio18ArrayList(dto121, dto122, dto123, dto124, dto125, dto126);
+		
+		System.out.println();
+		System.out.println("Esercizio 19 Array");
+
+		IntegerDTO dto127 = new IntegerDTO(5);
+		IntegerDTO dto128 = new IntegerDTO(2);
+		IntegerDTO dto129 = new IntegerDTO(10);
+		IntegerDTO dto130 = new IntegerDTO(7);
+		IntegerDTO dto131 = new IntegerDTO(3);
+		
+		StaticArrayService prova37 = new StaticArrayService();
+		prova37.Esercizio19(dto127, dto128, dto129, dto130, dto131);
+		
+		System.out.println();
+		System.out.println("Esercizio 19 ArrayList");
+
+		IntegerDTO dto132 = new IntegerDTO(10);
+		IntegerDTO dto133 = new IntegerDTO(5);
+		IntegerDTO dto134 = new IntegerDTO(2);
+		IntegerDTO dto135 = new IntegerDTO(7);
+		IntegerDTO dto136 = new IntegerDTO(4);
+		
+		DynamicArrayService prova38 = new DynamicArrayService();
+		prova38.Esercizio19ArrayList(dto132, dto133, dto134, dto135, dto136);
 	}
 }

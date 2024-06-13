@@ -308,33 +308,129 @@ public class StaticArrayService {
 			System.out.print(dto.getValue() + " ");
 		}
 	}
-    public void Esercizio16(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5, IntegerDTO dto6) {
-        IntegerDTO[] array1 = new IntegerDTO[3];
-        array1[0] = dto1;
-        array1[1] = dto2;
-        array1[2] = dto3;
-        
-        IntegerDTO[] array2 = new IntegerDTO[3];
-        array2[0] = dto4;
-        array2[1] = dto5;
-        array2[2] = dto6;
-       
-        IntegerDTO[] commonElements = new IntegerDTO[3];
-        
-        int index = 0;
 
-        for (IntegerDTO element1 : array1) {
-            for (IntegerDTO element2 : array2) {
-                if (element1.getValue() == element2.getValue()) {
-                	
-                    commonElements[index++] = element1;
+	public void Esercizio16(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5,
+			IntegerDTO dto6) {
+		IntegerDTO[] array1 = new IntegerDTO[3];
+		array1[0] = dto1;
+		array1[1] = dto2;
+		array1[2] = dto3;
+
+		IntegerDTO[] array2 = new IntegerDTO[3];
+		array2[0] = dto4;
+		array2[1] = dto5;
+		array2[2] = dto6;
+
+		IntegerDTO[] commonElements = new IntegerDTO[3];
+
+		int index = 0;
+
+		for (IntegerDTO element1 : array1) {
+			for (IntegerDTO element2 : array2) {
+				if (element1.getValue() == element2.getValue()) {
+
+					commonElements[index++] = element1;
+				}
+			}
+		}
+		System.out.print("Numeri in comune: ");
+		for (int i = 0; i < index; i++) {
+			System.out.print(commonElements[i] + " ");
+		}
+	}
+
+	public void Esercizio17(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5,
+			IntegerDTO dto6) {
+		IntegerDTO[] array1 = new IntegerDTO[3];
+		array1[0] = dto1;
+		array1[1] = dto2;
+		array1[2] = dto3;
+
+		IntegerDTO[] array2 = new IntegerDTO[3];
+		array2[0] = dto4;
+		array2[1] = dto5;
+		array2[2] = dto6;
+
+		IntegerDTO[] notCommonElements = new IntegerDTO[6];
+
+		int index = 0;
+
+		for (int i = 0; i < array1.length; i++) {
+			int count = 0;
+			for (int j = 0; j < array2.length; j++) {
+				if (array1[i].getValue() == array2[j].getValue()) {
+					count++;
+				}
+			}
+			if (count == 0) {
+				notCommonElements[index++] = array1[i];
+			}
+		}
+
+		for (int i = 0; i < array2.length; i++) {
+			int count = 0;
+			for (int j = 0; j < array1.length; j++) {
+				if (array2[i].getValue() == array1[j].getValue()) {
+					count++;
+				}
+			}
+			if (count == 0) {
+				notCommonElements[index++] = array2[i];
+			}
+		}
+
+		System.out.print("Elementi non comuni: ");
+		for (int i = 0; i < index; i++) {
+			System.out.print(notCommonElements[i].getValue() + " ");
+		}
+	}
+
+	public void Esercizio18(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5,
+			IntegerDTO dto6) {
+		IntegerDTO[] array1 = new IntegerDTO[3];
+		array1[0] = dto1;
+		array1[1] = dto2;
+		array1[2] = dto3;
+
+		IntegerDTO[] array2 = new IntegerDTO[3];
+		array2[0] = dto4;
+		array2[1] = dto5;
+		array2[2] = dto6;
+
+		int[] sumArray = new int[3];
+
+		for (int i = 0; i < 3; i++) {
+			sumArray[i] = array1[i].getValue() + array2[i].getValue();
+		}
+
+		System.out.print("Somma dell'array: ");
+		for (int i = 0; i < 3; i++) {
+			System.out.print(sumArray[i] + " ");
+		}
+	}
+	public void Esercizio19 (IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5) {
+        IntegerDTO[] array = new IntegerDTO[5];
+        array[0] = dto1;
+        array[1] = dto2;
+        array[2] = dto3;
+        array[3] = dto4;
+        array[4] = dto5;
+
+        
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[j].getValue() > array[j + 1].getValue()) {
+                    IntegerDTO temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
             }
         }
-
-        System.out.print("Numeri in comune: ");
-        for (int i = 0; i < index; i++) {
-            System.out.print(commonElements[i] + " ");
+        System.out.print("Array con buble sort: ");
+        for (IntegerDTO dto : array) {
+            System.out.print(dto.getValue() + " ");
         }
-	}
+    }
 }
+
+

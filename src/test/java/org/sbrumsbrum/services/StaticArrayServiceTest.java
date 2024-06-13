@@ -182,5 +182,43 @@ class StaticArrayServiceTest {
 		numeriComuni.Esercizio16(dto1, dto2, dto3, dto4, dto5, dto6);
 		System.out.println();
 	}
+	@Test
+	void calcolo18() {
+		System.out.println("Numeri non comuni fra due array:");
+		StaticArrayService numeriNonComuni = new StaticArrayService();
+		IntegerDTO dto1 = new IntegerDTO(10);
+		IntegerDTO dto2 = new IntegerDTO(5);
+		IntegerDTO dto3 = new IntegerDTO(2);
+		IntegerDTO dto4 = new IntegerDTO(10);
+		IntegerDTO dto5 = new IntegerDTO(5);
+		IntegerDTO dto6 = new IntegerDTO(3);
+		numeriNonComuni.Esercizio17(dto1, dto2, dto3, dto4, dto5, dto6);
+		System.out.println();
+	}
+	@Test
+	void calcolo19() {
+		System.out.println("Somma arrayList:");
+		StaticArrayService sommaArray = new StaticArrayService();
+		IntegerDTO dto1 = new IntegerDTO(10);
+		IntegerDTO dto2 = new IntegerDTO(5);
+		IntegerDTO dto3 = new IntegerDTO(2);
+		IntegerDTO dto4 = new IntegerDTO(10);
+		IntegerDTO dto5 = new IntegerDTO(5);
+		IntegerDTO dto6 = new IntegerDTO(3);
+		sommaArray.Esercizio18(dto1, dto2, dto3, dto4, dto5, dto6);
+		System.out.println();
+	}
+	@Test
+	void calcolo20() {
+		System.out.println("Array ordinato tramite bubble sort:");
+		StaticArrayService bubbleSort = new StaticArrayService();
+		IntegerDTO dto1 = new IntegerDTO(10);
+		IntegerDTO dto2 = new IntegerDTO(8);
+		IntegerDTO dto3 = new IntegerDTO(7);
+		IntegerDTO dto4 = new IntegerDTO(5);
+		IntegerDTO dto5 = new IntegerDTO(3);
+		bubbleSort.Esercizio19(dto1, dto2, dto3, dto4, dto5);
+		System.out.println();
+	}
 
 }

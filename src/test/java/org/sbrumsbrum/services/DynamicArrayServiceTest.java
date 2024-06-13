@@ -182,4 +182,42 @@ class DynamicArrayServiceTest {
 		numeriComuni.Esercizio16ArrayList(dto1, dto2, dto3, dto4, dto5, dto6);
 		System.out.println();
 	}
+	@Test
+	void calcolo18() {
+		System.out.println("Numeri non comuni fra due array:");
+		DynamicArrayService numeriNonComuni = new DynamicArrayService();
+		IntegerDTO dto1 = new IntegerDTO(10);
+		IntegerDTO dto2 = new IntegerDTO(5);
+		IntegerDTO dto3 = new IntegerDTO(2);
+		IntegerDTO dto4 = new IntegerDTO(10);
+		IntegerDTO dto5 = new IntegerDTO(5);
+		IntegerDTO dto6 = new IntegerDTO(3);
+		numeriNonComuni.Esercizio17ArrayList(dto1, dto2, dto3, dto4, dto5, dto6);
+		System.out.println();
+	}
+	@Test
+	void calcolo19() {
+		System.out.println("Somma array:");
+		DynamicArrayService sommaArray = new DynamicArrayService();
+		IntegerDTO dto1 = new IntegerDTO(10);
+		IntegerDTO dto2 = new IntegerDTO(5);
+		IntegerDTO dto3 = new IntegerDTO(2);
+		IntegerDTO dto4 = new IntegerDTO(10);
+		IntegerDTO dto5 = new IntegerDTO(5);
+		IntegerDTO dto6 = new IntegerDTO(3);
+		sommaArray.Esercizio18ArrayList(dto1, dto2, dto3, dto4, dto5, dto6);
+		System.out.println();
+	}
+	@Test
+	void calcolo20() {
+		System.out.println("Array ordinato tramite bubble sort:");
+		DynamicArrayService bubbleSort = new DynamicArrayService();
+		IntegerDTO dto1 = new IntegerDTO(10);
+		IntegerDTO dto2 = new IntegerDTO(8);
+		IntegerDTO dto3 = new IntegerDTO(7);
+		IntegerDTO dto4 = new IntegerDTO(5);
+		IntegerDTO dto5 = new IntegerDTO(3);
+		bubbleSort.Esercizio19ArrayList(dto1, dto2, dto3, dto4, dto5);
+		System.out.println();
+	}
 }
