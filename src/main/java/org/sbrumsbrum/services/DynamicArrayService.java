@@ -393,7 +393,6 @@ public class DynamicArrayService {
 		list.add(dto4);
 		list.add(dto5);
 
-		// Bubble sort using the swap mechanism
 		for (int i = 0; i < list.size() - 1; i++) {
 			for (int j = 0; j < list.size() - 1 - i; j++) {
 				if (list.get(j).getValue() > list.get(j + 1).getValue()) {
@@ -406,6 +405,63 @@ public class DynamicArrayService {
 		System.out.print("Array con bubble sort: ");
 		for (IntegerDTO dto : list) {
 			System.out.print(dto.getValue() + " ");
+		}
+	}
+
+	public void Esercizio20ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4,
+			IntegerDTO dto5) {
+		List<IntegerDTO> list = new ArrayList<>();
+		list.add(dto1);
+		list.add(dto2);
+		list.add(dto3);
+		list.add(dto4);
+		list.add(dto5);
+
+		for (int i = 0; i < list.size() - 1; i++) {
+			for (int j = 0; j < list.size() - 1 - i; j++) {
+				if (list.get(j).getValue() > list.get(j + 1).getValue()) {
+					IntegerDTO temp = list.get(j);
+					list.set(j, list.get(j + 1));
+					list.set(j + 1, temp);
+				}
+			}
+		}
+		System.out.println();
+		System.out.println("ArrayList di input: ");
+		for (IntegerDTO dto : list) {
+			System.out.print(dto.getValue() + " ");
+		}
+		System.out.println();
+		System.out.println("ArrayList ordinato con bubble sort: ");
+		for (IntegerDTO dto : list) {
+			System.out.print(dto.getValue() + " ");
+		}
+	}
+
+	public void Esercizio21ArrayList(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4) {
+		List<List<IntegerDTO>> matrix = new ArrayList<>();
+
+		for (int i = 0; i < 3; i++) {
+			List<IntegerDTO> row = new ArrayList<>();
+			for (int j = 0; j < 3; j++) {
+				row.add(new IntegerDTO(-1));
+			}
+			matrix.add(row);
+		}
+
+		matrix.get(0).set(0, dto1);
+		matrix.get(0).set(2, dto2);
+		matrix.get(2).set(0, dto3);
+		matrix.get(2).set(2, dto4);
+
+		matrix.get(1).set(1, new IntegerDTO(0));
+
+		System.out.println("Matrice: ");
+		for (List<IntegerDTO> row : matrix) {
+			for (IntegerDTO dto : row) {
+				System.out.print(dto.getValue() + " | ");
+			}
+			System.out.println();
 		}
 	}
 }

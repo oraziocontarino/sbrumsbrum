@@ -408,29 +408,88 @@ public class StaticArrayService {
 			System.out.print(sumArray[i] + " ");
 		}
 	}
-	public void Esercizio19 (IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5) {
-        IntegerDTO[] array = new IntegerDTO[5];
-        array[0] = dto1;
-        array[1] = dto2;
-        array[2] = dto3;
-        array[3] = dto4;
-        array[4] = dto5;
 
-        
-        for (int i = 0; i < array.length - 1; i++) {
-            for (int j = 0; j < array.length - 1 - i; j++) {
-                if (array[j].getValue() > array[j + 1].getValue()) {
-                    IntegerDTO temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                }
-            }
-        }
-        System.out.print("Array con buble sort: ");
-        for (IntegerDTO dto : array) {
-            System.out.print(dto.getValue() + " ");
-        }
-    }
+	public void Esercizio19(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5) {
+		IntegerDTO[] array = new IntegerDTO[5];
+		array[0] = dto1;
+		array[1] = dto2;
+		array[2] = dto3;
+		array[3] = dto4;
+		array[4] = dto5;
+
+		for (int i = 0; i < array.length - 1; i++) {
+			for (int j = 0; j < array.length - 1 - i; j++) {
+				if (array[j].getValue() > array[j + 1].getValue()) {
+					IntegerDTO temp = array[j];
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
+				}
+			}
+		}
+		System.out.print("Array con buble sort: ");
+		for (IntegerDTO dto : array) {
+			System.out.print(dto.getValue() + " ");
+		}
+	}
+
+	public void Esercizio20(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4, IntegerDTO dto5) {
+		IntegerDTO[] array = new IntegerDTO[5];
+		array[0] = dto1;
+		array[1] = dto2;
+		array[2] = dto3;
+		array[3] = dto4;
+		array[4] = dto5;
+
+		IntegerDTO sortedArray[] = new IntegerDTO[5];
+
+		for (int i = 0; i < array.length; i++) {
+			sortedArray[i] = array[i];
+		}
+
+		for (int i = 0; i < sortedArray.length; i++) {
+			for (int j = i + 1; j < sortedArray.length; j++) {
+				if (sortedArray[i].getValue() > sortedArray[j].getValue()) {
+					IntegerDTO temp = sortedArray[i];
+					sortedArray[i] = sortedArray[j];
+					sortedArray[j] = temp;
+				}
+			}
+		}
+		System.out.println();
+		System.out.println("Array di input:");
+		for (IntegerDTO element : array) {
+			System.out.print(element + " ");
+		}
+		System.out.println();
+		System.out.println("Array ordinato con bubble sort:");
+		for (IntegerDTO element : sortedArray) {
+			System.out.print(element + " ");
+		}
+		System.out.println();
+	}
+
+	public void Esercizio21(IntegerDTO dto1, IntegerDTO dto2, IntegerDTO dto3, IntegerDTO dto4) {
+		IntegerDTO[][] matrice = new IntegerDTO[3][3];
+
+		matrice[0][0] = dto1;
+		matrice[0][2] = dto2;
+		matrice[2][0] = dto3;
+		matrice[2][2] = dto4;
+
+
+		matrice[1][1] = new IntegerDTO(0);
+
+		matrice[0][1] = new IntegerDTO(-1);
+		matrice[1][0] = new IntegerDTO(-1);
+		matrice[1][2] = new IntegerDTO(-1);
+		matrice[2][1] = new IntegerDTO(-1);
+
+		System.out.println("Matrice:");
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				System.out.print(matrice[i][j].getValue() + " | ");
+			}
+			System.out.println();
+		}
+	}
 }
-
-

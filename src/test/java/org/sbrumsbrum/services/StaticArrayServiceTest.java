@@ -220,5 +220,28 @@ class StaticArrayServiceTest {
 		bubbleSort.Esercizio19(dto1, dto2, dto3, dto4, dto5);
 		System.out.println();
 	}
+	@Test
+	void calcolo21() {
+		System.out.println("Array ordinato tramite bubble sort e visualizzazione dell'array di input:");
+		StaticArrayService bubbleSort = new StaticArrayService();
+		IntegerDTO dto1 = new IntegerDTO(10);
+		IntegerDTO dto2 = new IntegerDTO(8);
+		IntegerDTO dto3 = new IntegerDTO(7);
+		IntegerDTO dto4 = new IntegerDTO(5);
+		IntegerDTO dto5 = new IntegerDTO(3);
+		bubbleSort.Esercizio20(dto1, dto2, dto3, dto4, dto5);
+		System.out.println();
+	}
+	@Test
+	void calcolo22() {
+		System.out.println("Matrice:");
+		StaticArrayService matrix = new StaticArrayService();
+		IntegerDTO dto1 = new IntegerDTO(10);
+		IntegerDTO dto2 = new IntegerDTO(8);
+		IntegerDTO dto3 = new IntegerDTO(7);
+		IntegerDTO dto4 = new IntegerDTO(5);
+		matrix.Esercizio21(dto1, dto2, dto3, dto4);
+		System.out.println();
+	}
 
 }
